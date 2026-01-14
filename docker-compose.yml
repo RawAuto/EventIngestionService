@@ -1,0 +1,10 @@
+services:
+  init-db:
+    build:
+      context: .
+      dockerfile: docker/worker/Dockerfile
+    volumes:
+      - ./data:/app/data
+    command: php bin/init-db.php
+    restart: "no"
+

@@ -73,6 +73,16 @@ These are deferred to keep the focus on **core reliability patterns**.
 
 This is an intentionally scoped system designed to demonstrate production-oriented backend engineering judgement. Check back for updates as development progresses.
 
+## Quick Start
+
+### 1. Start the service
+
+```bash
+docker-compose up --build
+```
+
+This starts one container (so far):
+- `init-db` - Initialises the SQLite database (runs once)
 ---
 
 *See [PLAN_DOCUMENT.md](PLAN_DOCUMENT.md) for detailed design notes.*
