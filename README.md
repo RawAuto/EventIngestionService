@@ -1,7 +1,5 @@
 # Reliable Webhook / Event Ingestion Service
 
-> **🚧 Work in Progress** — This project is under active development and not yet complete.
-
 A backend service designed to **reliably ingest and process webhook events** under real-world conditions such as retries, partial failures, and downstream outages.
 
 This project demonstrates production-oriented backend engineering patterns including **at-least-once delivery**, **idempotency**, **retry with backoff**, and **explicit failure handling**.
