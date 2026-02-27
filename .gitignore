@@ -1,0 +1,21 @@
+# SQLite database files
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+# Composer dependencies (if used later)
+/vendor/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*~

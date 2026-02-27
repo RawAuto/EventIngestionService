@@ -1,4 +1,27 @@
 services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+
+  worker:
+    build:
+      context: .
+      dockerfile: docker/worker/Dockerfile
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      init-db:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
   init-db:
     build:
       context: .
@@ -7,4 +30,3 @@ services:
       - ./data:/app/data
     command: php bin/init-db.php
     restart: "no"
-
